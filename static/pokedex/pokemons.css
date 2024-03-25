@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'arial';
+    text-decoration: none;
+}
+
+body {
+    background-image: linear-gradient(lightblue, lightgreen);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    padding: 30px;
+    padding-bottom: 0px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.header ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    list-style-type: none;
+}
+
+.header li {
+    margin-right: 20px;
+}
+
+.header li p {
+    color: white;
+    padding: 10px;
+}
+
+.header li :hover{
+    cursor: pointer;
+    background-color: #4169E1;
+    border-radius: 5px;
+}
+
+.buscar {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#buscar {
+    width: 60vw;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buscar button {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    color: #020165;
+    scale: 1.4;
+}
+
+.buscar button :hover {
+    cursor: pointer;
+} 
+
+.pokemons {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 300px 300px 300px; /* 3 colunas de 100px cada */
+    grid-template-rows: auto;
+    gap: 50px; /* Espaçamento entre as células */
+}
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-image: linear-gradient(white, lightgrey);
+    border-radius: 8px;
+    transition: 0.5s;
+    max-height: 290px;
+}
+
+.adicionar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-image: linear-gradient(white, lightgrey);
+    border-radius: 8px;
+    min-height: 290px;
+    min-width: 200px;
+}
+
+.adicionar > p {
+    scale: 3;
+}
+
+.adicionar:hover {
+    cursor: pointer;
+}
+
+.pokemon:hover {
+    box-shadow: 3px 3px 8px -5px black;
+    transition: 0.5s;
+    transform: scale(1.03);
+}
+
+
+#image img {
+    width: 200px;
+    transition: 1s;
+    text-shadow: 1px black;
+}
+
+.pokemon:hover #image img {
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+#title > h1 {
+    color: #030066;
+}
+
+#title > p {
+    color: grey;
+    position: relative;
+    left: 10px;
+}
+
+#tipos {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#desc {
+    overflow: hidden;
+}
+
+#desc p {
+    color: rgb(56, 55, 55);
+}
+
+/* Estilos para todos os tipos de Pokémon */
+
+.Grama, .Inseto, .Sombrio, .Dragão, .Elétrico, .Fada, .Lutador, .Fogo, .Voador, .Fantasma, .Planta, .Terrestre, .Gelo, .Normal, .Venenoso, .Psíquico, .Pedra, .Aço, .Água {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.Grama {
+    background-color: green;
+    color: white;
+}
+
+.Inseto {
+    background-color: #ADFF2F; /* Marrom */
+    color: black;
+}
+
+.Sombrio {
+    background-color: #2F4F4F; /* Cinza escuro */
+    color: white;
+}
+
+.Dragão {
+    background-color: #483D8B; /* Azul escuro */
+    color: white;
+}
+
+.Elétrico {
+    background-color: #FFD700; /* Amarelo */
+    color: black;
+}
+
+.Fada {
+    background-color: #FF69B4; /* Rosa */
+    color: black;
+}
+
+.Lutador {
+    background-color: #B22222; /* Vermelho escuro */
+    color: white;
+}
+
+.Fogo {
+    background-color: #FF4500; /* Laranja */
+    color: white;
+}
+
+.Voador {
+    background-color: #87CEEB; /* Azul claro */
+    color: black;
+}
+
+.Fantasma {
+    background-color: #6A5ACD; /* Azul roxo */
+    color: white;
+}
+
+.Planta {
+    background-color: #228B22; /* Verde floresta */
+    color: white;
+}
+
+.Terrestre {
+    background-color: #A0522D; /* Marrom claro */
+    color: white;
+}
+
+.Gelo {
+    background-color: #ADD8E6; /* Azul claro */
+    color: black;
+}
+
+.Normal {
+    background-color: #C0C0C0; /* Cinza */
+    color: black;
+}
+
+.Venenoso {
+    background-color: #9932CC; /* Roxo */
+    color: white;
+}
+
+.Psíquico {
+    background-color: #FF1493; /* Rosa forte */
+    color: white;
+}
+
+.Pedra {
+    background-color: #808080; /* Cinza escuro */
+    color: white;
+}
+
+.Aço {
+    background-color: #708090; /* Cinza */
+    color: white;
+}
+
+.Água {
+    background-color: #4169E1; /* Azul */
+    color: white;
+}
+
+footer {
+    background-color: #030066;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}

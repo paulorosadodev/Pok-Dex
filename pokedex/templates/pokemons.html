@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDex</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pokedex/pokemons.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/pokeball.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <img src="https://archives.bulbagarden.net/media/upload/4/4b/Pok%C3%A9dex_logo.png" alt="">
+        {% comment %} <ul>
+            <li><p>Geração 1</p></li>
+            <li><p>Geração 2</p></li>
+            <li><p>Geração 3</p></li>
+            <li><p>Geração 4</p></li>
+            <li><p>Geração 5</p></li>
+            <li><p>Geração 6</p></li>
+            <li><p>Geração 7</p></li>
+            <li><p>Geração 8</p></li>
+            <li><p>Geração 9</p></li>
+        </ul> {% endcomment %}
+    </div>
+    <div class="buscar">
+        <input type="text" name="buscar_pokemon" id="buscar" placeholder="Ex: Pikachu">
+        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg></button>
+    </div>
+    <div class="pokemons">
+        {% for pokemon in pokemons %}
+            <a href="{% url 'pokemon' pokemon.numero %}">
+                {% if pokemon.tipo1 == 'Água' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #87CEEB)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Fogo' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #FFA500)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Grama' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #90EE90)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Inseto' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #ADFF2F)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Sombrio' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, black)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Dragão' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #483D8B)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Elétrico' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #FFFF00)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Fada' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #FF69B4)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Lutador' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #8B4513)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Voador' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #ADD8E6)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Fantasma' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #483D8B)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Planta' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #90EE90)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Terrestre' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #DEB887)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Gelo' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #ADD8E6)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Normal' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #C0C0C0)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Venenoso' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #8A2BE2)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Psíquico' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #FF00FF)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Pedra' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #A52A2A)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% elif pokemon.tipo1 == 'Aço' %}
+                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #C0C0C0)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                {% endif %}
+                    <div id="title">
+                        <h1>{{ pokemon.nome }}&nbsp;</h1>
+                        <p>Nº {{ pokemon.numero }}</p>
+                    </div>
+                    <div id="tipos">
+                        <h3><span class="{{pokemon.tipo1}}">{{ pokemon.tipo1 }}</span> {% if pokemon.tipo2 %}<span class="{{pokemon.tipo2}}">{{ pokemon.tipo2 }}</span>{% endif %}</h3>
+                    </div>
+                    <span id="image">
+                        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{ pokemon.numero }}.png">
+                    </span>
+                    <span id="desc">
+                        <p>{{ pokemon.descricao }}</p>
+                    </span>
+                </div>
+            </a>
+        {% endfor %}
+            <div class="adicionar"><p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+            </svg></p></div>
+    </div>
+
+    <footer><p>Desenvolvido por <a href="https://beacons.ai/paulorosado" target="_blank">Paulo Rosado</a></p></footer>
+</body>
+</html>
