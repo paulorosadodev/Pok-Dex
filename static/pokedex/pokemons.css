@@ -15,7 +15,6 @@ body {
     padding: 30px;
     padding-bottom: 0px;
     text-align: center;
-    background-color: lightblue;
 }
 
 .header ul {
@@ -89,6 +88,7 @@ body {
     border-radius: 8px;
     transition: 0.5s;
     max-height: 290px;
+    min-height: 290px;
 }
 
 .adicionar {

@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PókeDex - {{pokemon.nome}}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pokedex/pokemon.css' %}">
 </head>
-<body>
-    <h1>{{pokemon.nome}}</h1>
-    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{ pokemon.numero }}.png" alt="">
+<body class="{{ pokemon.tipo1 }}">
+    <div class="pokemon">
+        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/{{ pokemon.numero }}.png" alt="">
+        <h1>{{pokemon.nome}}</h1>
+    </div>
 </body>
 </html>

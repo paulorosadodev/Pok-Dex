@@ -1,0 +1,108 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'arial';
+}
+
+.pokemon {
+    display: flex;
+    margin-left: 60px;
+    margin-top: 5vh;
+}
+
+.Grama {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8c601631-9665-49bc-8f2d-82c37ddc520c/df0wd93-c6c95f16-fe79-4c73-9f61-f2e78e255453.jpg/v1/fill/w_736,h_414,q_75,strp/pokemon_grass_background_by_darkdinox_df0wd93-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDE0IiwicGF0aCI6IlwvZlwvOGM2MDE2MzEtOTY2NS00OWJjLThmMmQtODJjMzdkZGM1MjBjXC9kZjB3ZDkzLWM2Yzk1ZjE2LWZlNzktNGM3My05ZjYxLWYyZTc4ZTI1NTQ1My5qcGciLCJ3aWR0aCI6Ijw9NzM2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.IQBQg2GOPZjfwoTStbFShKnL-vU2JbLYjx81RnMCzfg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.Inseto {
+    background-color: #ADFF2F; /* Marrom */
+    color: black;
+}
+
+.Sombrio {
+    background-color: #2F4F4F; /* Cinza escuro */
+    color: white;
+}
+
+.Dragão {
+    background-color: #483D8B; /* Azul escuro */
+    color: white;
+}
+
+.Elétrico {
+    background-color: #FFD700; /* Amarelo */
+    color: black;
+}
+
+.Fada {
+    background-color: #FF69B4; /* Rosa */
+    color: black;
+}
+
+.Lutador {
+    background-color: #B22222; /* Vermelho escuro */
+    color: white;
+}
+
+.Fogo {
+    background-color: #FF4500; /* Laranja */
+    color: white;
+}
+
+.Voador {
+    background-color: #87CEEB; /* Azul claro */
+    color: black;
+}
+
+.Fantasma {
+    background-color: #6A5ACD; /* Azul roxo */
+    color: white;
+}
+
+.Planta {
+    background-color: #228B22; /* Verde floresta */
+    color: white;
+}
+
+.Terrestre {
+    background-color: #A0522D; /* Marrom claro */
+    color: white;
+}
+
+.Gelo {
+    background-color: #ADD8E6; /* Azul claro */
+    color: black;
+}
+
+.Normal {
+    background-color: #C0C0C0; /* Cinza */
+    color: black;
+}
+
+.Venenoso {
+    background-color: #9932CC; /* Roxo */
+    color: white;
+}
+
+.Psíquico {
+    background-color: #FF1493; /* Rosa forte */
+    color: white;
+}
+
+.Pedra {
+    background-color: #808080; /* Cinza escuro */
+    color: white;
+}
+
+.Aço {
+    background-color: #708090; /* Cinza */
+    color: white;
+}
+
+.Água {
+    background-color: #4169E1; /* Azul */
+    color: white;
+}

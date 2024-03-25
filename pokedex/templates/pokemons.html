@@ -33,7 +33,7 @@
         {% for pokemon in pokemons %}
             <a href="{% url 'pokemon' pokemon.numero %}">
                 {% if pokemon.tipo1 == 'Água' %}
-                    <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #87CEEB)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
+                    <div class="pokemon {{ pokemon.tipo1 }}" onmouseover="this.style.backgroundImage='linear-gradient(white, #87CEEB)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
                 {% elif pokemon.tipo1 == 'Fogo' %}
                     <div class="pokemon" onmouseover="this.style.backgroundImage='linear-gradient(white, #FFA500)'"  onmouseout="this.style.backgroundImage='linear-gradient(white, lightgrey)'">
                 {% elif pokemon.tipo1 == 'Grama' %}

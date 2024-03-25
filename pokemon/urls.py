@@ -4,6 +4,6 @@ from pokedex import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.pokemons, name="pokemons"),
+    path('pokemons/', views.pokemons, name="pokemons"),
     path('pokemon/<str:numero>', views.pokemon, name="pokemon"),
 ]
